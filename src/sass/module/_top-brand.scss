@@ -1,0 +1,220 @@
+@use "global" as *;
+
+.top-brand {
+    padding: rem(60) 0;
+    position: relative;
+    background: linear-gradient(to right, $color-accent 0%,$color-accent 26.6667%, transparent 26.6667%,transparent 100.0000%);
+    
+    @include mq('md') {
+        padding: rem(123) 0 rem(177);
+        background: linear-gradient(to right, $color-accent 0%,$color-accent 41.6667%, transparent 41.6667%,transparent 100.0000%);
+        
+    }
+}
+
+// .top-brand::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     width: 26.6667%;
+//     height: 100%;
+//     background: $color-accent;
+//     opacity: 0.4;
+// }
+
+.top-brand__content {
+    // width: 100%;
+    position: relative;
+
+    // @include mq('md') {
+        
+    // }
+}
+
+// .top-brand__content::before {
+//     content: "";
+//     display: block;
+    
+//     @include mq('md') {
+//         padding-top: 52.0833%;
+//     }
+    
+// }
+
+.top-brand__image {
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    transition: all .8s ease;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+
+    @include mq('md') {
+        // width: rem(1010);
+        // position: absolute;
+        margin-left: auto;
+        
+
+        width: 70.139%;
+        // height: rem(450);
+        // left: auto;
+    }
+}
+
+.top-brand__image.is-active {
+    transform: scaleX(1.0);
+}
+
+
+
+
+
+.top-brand__image::before {
+    content: "";
+    display: block;
+    padding-top: 44.8%;
+    
+    @include mq('md') {
+        padding-top: 44.5544%;
+    }
+}
+
+.top-brand__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.top-brand__titles {
+    color: $white;
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+    position: relative;
+    bottom: rem(75);
+
+    @include mq('md') {
+        position: absolute;
+        top: 34.6667%;
+        right: 0;
+        width: 100%;
+        bottom: auto;
+    }
+}
+
+.top-brand__secondary-title {
+    text-align: right;
+    letter-spacing: 0.14em;
+    font-weight: 100;
+    margin-bottom: rem(4);
+    padding-right: rem(20);
+    
+    @include mq('md') {
+        padding-right: rem(200);
+        font-size: rem(20);   
+    }
+}
+
+.top-brand__line {
+    margin-bottom: rem(3);
+    width: rem(355);
+    height: rem(4);
+    background: linear-gradient(to right, green 0%,green 33.3333%,white 33.3333%,white 66.6666%,red 66.6666%,red 100%);
+    margin-left: auto;
+    
+    @include mq('md') {
+        width: 81.25%;
+        height: rem(6);
+        margin-bottom: 0;
+        
+    }
+}
+
+.top-brand__primary-title {
+    text-align: right;
+    font-size: rem(30);
+    line-height: 1.13;
+    letter-spacing: 0.14em;
+    font-weight: 100;
+    padding-right: rem(20);
+    
+    @include mq('md') {
+        // padding-right: rem(168);
+        padding-right: 0;
+        font-size: rem(78);   
+        letter-spacing: 0.5em;
+    }
+}
+
+.top-brand__primary-title .u-desktop {
+    display: none;
+
+    @include mq('md') {
+        display: inline-block;
+    }
+}
+
+
+// .top-brand__color-black-sp {
+//     color: $black;
+    
+//     @include mq('md') {
+//         color: $white;
+        
+//     }
+// }
+
+// .top-brand__color-black-pc {
+//     color: $white;
+    
+//     @include mq('md') {
+//         color: $black;
+//     }
+// }
+
+
+//アニメーションのCSSに打ち勝つため親のクラスを指定し詳細度を上げています
+.top-brand__content .top-brand__name-image {
+    position: absolute;
+    width: 94.6667% ;
+    right: 0;
+    top: 90%;
+
+    @include mq('md') {
+        width: 86.1111% ;
+        top: 50%;
+    }
+
+}
+
+
+
+.top-brand__name-image::before {
+    content: "";
+    display: block;
+    padding-top: 29.014%;
+
+    @include mq('md') {
+        padding-top: 10.645%;
+    }
+}
+
+.top-brand__name-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}

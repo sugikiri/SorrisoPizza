@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.pc-reserve {
+    color: $white;
+    padding: rem(12) rem(52);
+    background: $color-main;
+    position: relative;
+    height: inherit;
+    opacity: 1.0;
+    transition: all .3s ease;
+
+}
+
+.pc-reserve:hover {
+    opacity: 0.6;
+}
+
+.pc-reserve::after {
+    content: "";
+    width: 100%;
+    height: rem(5);
+    background: linear-gradient(to right, green 0%,green 33.3333%,white 33.3333%,white 66.6666%,red 66.6666%,red 100%);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}
+
+.pc-reserve__text-english {
+    text-align: center;
+    font-size: rem(16);
+}
+
+.pc-reserve__text-japanese {
+    text-align: center;
+    font-size: rem(24);
+}

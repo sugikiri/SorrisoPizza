@@ -1,0 +1,166 @@
+@use "global" as *;
+
+.top-about {
+    padding-bottom: rem(60);
+    position: relative;
+    
+    @include mq('md') {
+        padding-top: rem(86);
+        overflow: hidden;
+        padding-bottom: rem(80);
+    }
+
+}
+
+
+.top-about__contents-wrapper {
+
+    @include mq('md') {
+        display: flex;
+    }
+    
+}
+
+.top-about__contents {
+    
+    @include mq('md') {
+        width: rem(540);
+        margin-top: rem(59);
+        margin-right: rem(150);
+    }
+}
+
+.top-about__titles {
+    margin-bottom: rem(40);
+    
+    @include mq('md') {
+        margin-bottom: rem(60);
+    }
+}
+
+.top-about__text {
+    text-align: center;
+    line-height: 2.0;
+    margin-bottom: rem(120);
+    
+    @include mq('md') {
+        font-size: rem(18);
+        margin-bottom: rem(60);
+    }
+}
+
+.top-about__text span {
+    display: none;
+    
+    @include mq('md') {
+        display: inline;
+        
+    }
+}
+
+.top-about__images {
+    // margin-bottom: rem(59);
+    position: relative;
+    width: rem(220);
+    margin: 0 auto rem(80);
+    
+    @include mq('md') {
+        width: rem(350);
+        margin-bottom: rem(179);
+    }
+
+}
+
+.top-about__image {
+    position: relative;
+    margin: 0 auto;
+}
+
+.top-about__image::before {
+    content: "";
+    display: block;
+    padding-top: 68.1818%;
+    
+    @include mq('md') {
+        padding-top: 160%;        
+    }
+}
+
+.top-about__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.top-about__images-name {
+    font-size: rem(28);
+    color: $color-main;
+    letter-spacing: 0.485em;
+    font-weight: bold;
+    position: absolute;
+    transform: translateY(-50%);
+    // text-align: right;
+    left: 41%;
+    
+    @include mq('md') {
+        transform:translateY(0%) rotate(90deg) ;
+        font-size: rem(60);
+        left: 13%;
+        top: 46%;
+        transform-origin: 0% 0%;
+        
+    }
+}
+
+.top-about__images-decoration {
+    width: rem(110);
+    position: absolute;
+    top: -32%;
+    left: -35%;
+    
+    @include mq('md') {
+        width: rem(251);
+        top: 0%;
+        left: 100%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.top-about__button {
+    text-align: center;
+}
+
+.top-about__background {
+    background: $color-accent;
+    right: 0;
+    bottom: 0;
+    width: 29.6%;
+    height: 62.5187%;
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+    z-index: -1;
+    
+    @include mq('md') {
+        width: 48.6111%;
+        opacity: 1.0;
+        height: 67%;
+        
+    }
+}
+
+.top-about__decoration {
+    width: rem(238);
+    position: absolute;
+    top: 60%;
+    left: 5.5%;
+}
+
+.top-about__decoration img {
+
+}

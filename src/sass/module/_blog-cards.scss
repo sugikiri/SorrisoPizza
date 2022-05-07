@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-cards__item {
+    width: calc( 50% - rem(16) * 1 / 2);
+    margin-bottom: rem(38);
+    
+    @include mq('md') {
+        width: calc( 25% - rem(52) * 3 / 4);
+        margin-bottom: rem(40);
+    }
+}
+
+.blog-cards__item:nth-child(odd) {
+    margin-right: rem(16);
+    
+    @include mq('md') {
+        margin-right: 0;
+    }
+}
+
+.blog-cards__item:not(:nth-child( 4n )) {
+
+    @include mq('md') {
+        margin-right: rem(52);
+    }
+}

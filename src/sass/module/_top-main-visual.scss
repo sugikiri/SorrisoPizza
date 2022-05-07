@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.top-main-visual {
+    position: relative;
+}
+
+.top-main-visual::before {
+    content: "";    
+    display: block;
+    padding-top: 222.9333%;
+    
+    @include mq('md') {
+        padding-top: 47.2222%;
+        
+    }
+}
+
+.top-main-visual__titles {
+    position: absolute;
+    top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    color: $white;
+    text-align: center;
+    
+}
+
+.top-main-visual__title {
+    font-family: $second-font-family;
+    font-size: rem(40);
+    line-height: 1.4;
+    margin-bottom: rem(45);
+    
+    @include mq('md') {
+        margin-bottom: rem(40);
+        font-size: rem(80);
+        white-space: nowrap;
+    }
+}
+
+.top-main-visual__subtitle {
+    font-size: rem(16);
+    font-weight: $regular;
+    letter-spacing: 0.14em;
+    
+    @include mq('md') {
+        font-size: rem(24);
+    }
+}
+
+.top-main-visual .top-main-visual__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 100%;
+    height: 100% !important;
+}
+
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.slide-in_inner {
+	display: inline-block;
+    width: 100%;
+
+}
+
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+	animation-name:slideTextX100;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+	transform: translate(-100%,-50%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+	transform: translate(0,-50%);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+	animation-name:slideTextX-100;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+	transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}

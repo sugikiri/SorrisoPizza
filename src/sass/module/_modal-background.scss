@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-base;
+    z-index: map-get($layer, "modal");
+    padding: 0 rem(20);
+    display: none;
+    // transition: all 3s ease;
+    // opacity: 0;
+    // visibility: hidden;
+}
+
+.modal-background.is-active {
+    display: block;
+    opacity: 1.0;
+    visibility: visible;
+}
+

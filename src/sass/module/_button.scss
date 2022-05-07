@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.button {
+    display: inline-block;
+    padding: rem(18) rem(38);
+    background: $color-main;
+    color: $white;
+    box-shadow:  0 rem(4) 0 rgba(0,0,0, 0.25);
+    position: relative;   
+
+    
+    @include mq('md') {
+        font-size: rem(18);
+        padding: rem(20) rem(73);
+    }
+
+
+}
+
+.button span {
+    display: inline-block;
+    padding-right: rem(44);
+    position: relative;
+}
+
+.button span::after {
+    content: "";
+    background: url(../../../images/common/arrow.png) no-repeat center center / contain;
+    position: absolute;
+    height: rem(12);
+    width: rem(12);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4%;
+    
+    
+}
+
+.button.button--decoration-italy {
+    padding: rem(18) rem(46);
+    
+    @include mq('md') {
+        padding: rem(22) rem(55);
+        font-size: rem(18);
+        
+    }
+}
+
+.button.button--decoration-italy::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, green 0%,green 33.3333%,white 33.3333%,white 66.6666%,red 66.6666%,red 100%);;
+}

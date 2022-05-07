@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.sp-reserve {
+    width: rem(60);
+    height: inherit;
+    position: relative;
+    padding-top: rem(12);
+    background: #BD8D62;
+}
+
+.sp-reserve::after {
+    content: "";
+    width: 100%;
+    height: rem(4);
+    background: linear-gradient(to right, green 0%,green 33.3333%,white 33.3333%,white 66.6666%,red 66.6666%,red 100%);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}
+
+.sp-reserve__image {
+    width: rem(24);
+    max-width: 100%;
+    height: rem(24);
+    margin: 0 auto;
+}
+
+.sp-reserve__image img {
+
+}
+
+.sp-reserve__text {
+    color: $white;
+    font-size: rem(8);
+    text-align: center;
+}

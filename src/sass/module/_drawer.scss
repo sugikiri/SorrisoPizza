@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.drawer {
+    width: rem(60);
+    max-width: 100%;
+    height: inherit;
+    background: $color-main;
+    position: relative;
+}
+
+.drawer__items {
+    width: rem(22);
+    height: rem(14);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.drawer__item1,.drawer__item2 {
+    position: absolute;
+    width: rem(22);
+    height: rem(2);
+    background: $white;
+}
+
+.drawer__item3 {
+    position: absolute;
+    width: rem(11);
+    height: rem(2);
+    background: $white;
+}
+
+.drawer__item1 {
+    top: 0;
+    left: 0;
+}
+
+.drawer__item2 {
+    top: rem(6);
+    left: 0;
+}
+
+.drawer__item3 {
+    top: rem(12);
+    right: 0;
+}
+
+.drawer.is-active .drawer__item1 {
+    transform: rotate(-45deg);
+    top: rem(8);
+}
+
+.drawer.is-active .drawer__item2 {
+    display: none;
+}
+
+.drawer.is-active .drawer__item3 {
+    transform: rotate(45deg);
+    top: rem(8);
+    width: rem(22);
+}

@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.top-blog {
+    @include mq('md') {
+        padding-bottom: rem(80);
+        margin-bottom: rem(100);
+        position: relative;
+    }
+}
+
+.top-blog__titles {
+    margin-bottom: rem(60);
+    
+    @include mq('md') {
+        margin-bottom: rem(80);
+    }
+}
+
+.top-blog__cards {
+    margin-bottom: rem(51);
+    
+    @include mq('md') {
+        margin-bottom: rem(40);
+        
+    }
+
+}
+
+.top-blog__button {
+    text-align: center;
+}
+
+.top-blog__decoration {
+    width: rem(129);
+    position: absolute;
+    left: rem(71);
+    bottom: rem(34);
+
+}
+
+.top-blog__decoration img {
+
+}

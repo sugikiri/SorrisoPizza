@@ -1,0 +1,210 @@
+@use "global" as *;
+
+.modal-reserve {
+    position: fixed;
+    z-index: map-get($layer, "modal") + 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    // transition: all 3s ease;
+    overflow-y:scroll;
+    height: 78.9063%;
+    padding: rem(60) rem(20) rem(80);
+    background: $white;
+    // opacity: 0;
+    display: none;
+    // visibility: hidden;
+    
+    @include mq('md') {
+        padding: rem(60) rem(56) rem(80);
+        width: rem(613);
+        max-width: 100%;
+        
+    }
+}
+
+.modal-reserve.is-active {
+    visibility: visible;
+    opacity: 1.0;
+    display: block;
+    background: red;
+}
+
+// .modal-reserve__inner {
+//     width: 100%;
+//     padding-right: $padding-sp;
+//     padding-left: $padding-sp;
+//     padding-top: rem(60);
+//     padding-bottom: rem(80);
+//     margin-right: auto;
+//     margin-left: auto;
+//     height: 90%;
+//     margin-top: auto;
+//     margin-bottom: auto;
+    
+    
+    
+//     @include mq("md") {
+//         max-width: $inner + strip-unit($padding-pc) * 2;
+//         padding-right: $padding-pc;
+//         padding-left: $padding-pc;
+//     }
+    
+// }
+
+.modal-reserve__content {
+    background: $white;
+    color: $color-main;
+    padding: rem(60) rem(20) rem(80);
+}
+
+.modal-reserve__title {
+    text-align: center;
+    font-size: rem(30);
+    font-weight: bold;
+    margin-bottom: rem(60);
+}
+
+.modal-reserve__form {
+
+}
+
+.modal-reserve__dl {
+
+}
+
+.modal-reserve__raw {
+    margin-bottom: rem(27);
+}
+
+.modal-reserve__raw:nth-child(4) {
+    margin-bottom: rem(60);
+}
+
+.modal-reserve__label {
+    font-size: rem(12);
+    font-weight: bold;
+    color: $color-main;
+    margin-bottom: rem(10);
+    
+    @include mq('md') {
+        font-size: rem(16);
+        
+    }
+
+}
+
+.modal-reserve__label label {
+
+}
+
+.modal-reserve__input {
+}
+
+.modal-reserve__input [type="text"] {
+    box-shadow: none;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+    font-size: rem(16);
+    font-weight: bold;
+    padding-bottom: rem(8);
+    border-bottom: solid 2px $color-main;
+    
+    @include mq('md') {
+        font-size: rem(20);
+        
+    }
+    
+}
+
+.modal-reserve__input [type="tel"] {
+    box-shadow: none;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+    font-size: rem(16);
+    padding-bottom: rem(7);
+    border-bottom: solid 1px $color-main;
+
+    @include mq('md') {
+        font-size: rem(20);
+        
+    }
+
+}
+
+.modal-reserve__input [type="email"] {
+    box-shadow: none;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+    font-size: rem(16);
+    padding-bottom: rem(7);
+    border-bottom: solid 1px $color-main;
+
+    @include mq('md') {
+        font-size: rem(20);
+        
+    }
+}
+
+.modal-reserve__input [type="datetime-local"] {
+    box-shadow: none;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+    font-size: rem(16);
+    padding-bottom: rem(7);
+    border-bottom: solid 1px $color-main;
+
+    @include mq('md') {
+        font-size: rem(20);
+        
+    }
+}
+
+.modal-reserve__button {
+    text-align: center;
+    
+}
+
+.modal-reserve__button [type="submit"] {
+    appearance: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: rem(18);
+    display: inline-block;
+    padding: rem(20) rem(55);
+    background: $color-main url(../../../images/common/arrow.png) no-repeat right rem(50) center / rem(12) rem(12);
+    color: $white;
+    box-shadow:  0 rem(4) 0 rgba(0,0,0, 0.25);
+    width: rem(280);
+    max-width: 100%;
+    text-align-last: left;
+
+    @include mq('md') {
+        font-size: rem(18);
+        padding: rem(20) rem(73);
+    }
+
+}
+
+.modal-reserve__message {
+    text-align: center;
+    margin-top: rem(60);
+    display: none;
+}
+
+.modal-reserve__message.modal-reserve__message--error {
+    color: #f00;
+}
+

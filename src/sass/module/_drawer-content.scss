@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.drawer-content {
+    position: fixed;
+    z-index: map-get($layer, "drawer");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    transition: all .3s ease;
+    color: $white;
+    text-align: center;
+}
+
+.drawer-content.is-active {
+    visibility: visible;
+}
+
+.drawer-content__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawer-content__items {
+    width: 100%;
+}
+
+.drawer-content__item {
+
+}
+
+.drawer-content__item  a {
+    display: block;
+    color: $black;
+    font-size: rem(40);
+    width: 100%;
+}
+
+.drawer-content__item:not(:last-child) {
+    margin-bottom: rem(40);
+}

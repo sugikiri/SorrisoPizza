@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.header {
+    height: rem(60);
+    width: 100%;
+    z-index: map-get($layer, 'header');
+    position: fixed;
+    top: 0;
+    background: $color-base;
+    
+    @include mq('md') {
+        height: rem(90);
+    }
+}
+
+/*　上に上がる動き　*/
+
+.header.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+}
+
+/*　上に上がる動きここまで　*/
+
+/*　下に下がる動き　*/
+
+.header.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 0;
+	transform: translateY(-100px);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+}
+/*　下に下がる動きここまで　*/
+
+
+.header__inner {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    padding-left: rem(8);
+    margin: 0 auto;
+    
+    @include mq('md') {
+        padding-left: rem(60);
+        
+    }
+}
+
+.header__logo {
+    width: rem(135);
+    max-width: 100%;
+    margin-right: auto;
+    
+    @include mq('md') {
+        width: rem(230);
+    }
+}
+
+.header__logo a {
+
+}
+
+.header__logo a img {
+
+}
+
+.header__reserve {
+    
+}
+
+.header__menu {
+
+}
+
+.header__nav {
+
+}
+
+.header__pc-reserve {
+
+}
+
+.header__sp-reserve {
+
+}
+

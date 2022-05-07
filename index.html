@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>Sorrizo Pizza</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css">
+  <!-- メインビジュアルに使用するライブラリ  -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+  <!-- フワッと表示させるため -->
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+  <div id="splash">
+    <div id="splash_logo">
+    <!-- ベースにするsvgタグを入れる。記述の一部を後程解説する自作のsvgタグと差し替えます。-->
+    <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="552" height="76" viewBox="0 0 552 76" style="enable-background:new 0 0 552 76;" xml:space="preserve">
+    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./text.png" width="552" height="76" mask="url(#clipmask)"></image>
+    <mask id="clipmask" maskUnits="objectBoundingBox">
+      <polyline class="st0" points="62 9 52 9 36 9 24 9 10 15 10 24 0 32 9 43 19 43 31 43 40 43 31 67 15 67 23 76 39 76 62 42.5 73 36 84 38 84 47 84 64 74 71 65 66 70 51 97 34 108 35 96 50 94 60 96 69 108 62 108 47 118 43 137 43 143 32 147 43 129 69 147 55 157 48 164 26 187 14 175 33 169 48 163 60 166 71 177 70 187 50 194 38 208 30 214 42.5 201 49 194 76 208 70 214 61 227 43 243 35 243 53 243 68 232 76 221 70 226 59 254 42.5 254 33 265 42.5 265 58 270.94 41.37 275 30 275.5 56 286 42.5 294 21 298 43 298 60 308 43 308 24 317 9 330 9 346 0 360 0 375 15 375 34 369 43 348 54 350 33 350 17 338 43 332 60 330 76 350 66 400 16 400 30 386 43 377 63 387 76 408 43 419 38 429 38 413 58 413 76 424 68 435 62 441 49 454 38 468 38 468 49 458 56 443 76 458 76 468 63 478 56 486 43 503 38 489 57 482 67 493 69 503 57 518 43 527 29 527 47 514 58 509 70 527 71 544 53 552 38 552 23"/>
+    </mask> 
+    </svg><!--ベースにするタグここまで-->
+    <!--/splash_logo--></div>
+    <!--/splash--></div>
+
+  <div class="splashbg1"></div>
+  <div class="splashbg2"></div>
+
+  <div id="container">
+
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo"><a href="#"><img src="./images/common/logo.png" alt="ヘッダーロゴ"></a></h1>
+        <nav class="header__nav nav u-desktop">
+          <ul class="nav__lists">
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#access">Access</a></li>
+          </ul>
+        </nav>
+        <div class="pc-reserve header__pc-reserve u-desktop js-modal-open" data-target=".js-for-modal">
+          <div class="pc-reserve__text-english">Reserve</div>
+          <div class="pc-reserve__text-japanese">予約する</div>
+        </div>
+        <div class="header__sp-reserve sp-reserve u-mobile js-modal-open" data-target=".js-for-modal">
+          <div class="sp-reserve__image"><img src="./images/common/calendar-icon.png" alt="予約カレンダーのアイコン"></div>
+          <div class="sp-reserve__text">予約する</div>
+        </div>
+        <div class="header__menu drawer u-mobile js-drawer">
+          <div class="drawer__items">
+            <div class="drawer__item1"></div>
+            <div class="drawer__item2"></div>
+            <div class="drawer__item3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="drawer-content">
+      <div class="drawer-content__wrapper">
+        <ul class="drawer-content__items">
+          <li class="drawer-content__item"><a href="#about">About</a></li>
+          <li class="drawer-content__item"><a href="#menu">Menu</a></li>
+          <li class="drawer-content__item"><a href="#news">News</a></li>
+          <li class="drawer-content__item"><a href="#access">Access</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="drawer-background"></div>
+    
+  
+    <section class="top-main-visual top-main-visual-layout">
+      <figure class="top-main-visual__image"></figure>
+      <!-- <figure class="top-main-visual-image u-mobile"><img src="./images/top/top-view-sp-01.png" alt="ピザを調理している写真"></figure> -->
+      <!-- <figure class="top-main-visual-image u-desktop"><img src="./images/top/top-view-pc-01.png" alt="ピザを調理している写真"></figure> -->
+      <div class="top-main-visual__titles slide-in leftAnime">
+        <div class="top-main-visual__wrapper slide-in_inner leftAnimeInner">
+          <h2 class="top-main-visual__title">Un viaggio<br class=""> culinario<br class="u-mobile"> memorabile</h2>
+          <h3 class="top-main-visual__subtitle">心に残るグルメの旅へ</h3>
+        </div>
+      </div>
+      <div class="top-main-visual__titles slide-in leftAnime">
+        <div class="top-main-visual__wrapper slide-in_inner leftAnimeInner">
+          <h2 class="top-main-visual__title">Un negozio<br class="u-mobile"> magico che<br> porta<br class="u-mobile">
+            naturalmente<br class="u-mobile"> un<br class="u-desktop"> sorriso sul<br class="u-mobile"> tuo viso.</h2>
+          <h3 class="top-main-visual__subtitle">自然と笑顔になれる、魔法のお店</h3>
+        </div>
+      </div>
+      <div class="top-main-visual__titles slide-in leftAnime">
+        <div class="top-main-visual__wrapper slide-in_inner leftAnimeInner">
+          <h2 class="top-main-visual__title">Il miglior<br class="u-mobile"> cibo<br class="u-desktop"> italiano<br
+              class="u-mobile"> disponibile.</h2>
+          <h3 class="top-main-visual__subtitle">最高のイタリアンをお届けします</h3>
+        </div>
+      </div>
+    </section>
+  
+    <section id="news" class="top-news top-news-layout">
+      <div class="inner">
+        <div class="top-news__wrapper">
+          <div class="top-news__titles top-titles">
+            <h3 class="top-titles__secondary">News</h3>
+            <h2 class="top-titles__primary">お知らせ</h2>
+          </div>
+          <div class="top-news__items">
+            <a href="" class="top-news__item">
+              <div class="top-news__item-content-wrapper">
+                <date class="top-news__date" datetime="2022-03-03">2022.03.03</date>
+                <p class="top-news__title">コロナウイルスによる営業時間短縮のお知らせ</p>
+              </div>
+            </a>
+            <a href="" class="top-news__item">
+              <div class="top-news__item-content-wrapper">
+                <date class="top-news__date" datetime="2022-03-03">2022.03.03</date>
+                <p class="top-news__title">コロナウイルスによる営業時間短縮のお知らせ</p>
+              </div>
+            </a>
+            <a href="" class="top-news__item">
+              <div class="top-news__item-content-wrapper">
+                <date class="top-news__date" datetime="2022-03-03">2022.03.03</date>
+                <p class="top-news__title">コロナウイルスによる営業時間短縮のお知らせ</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="modal-reserve js-for-modal">
+        <!-- <div class="modal-reserve__content"> -->
+          <div class="modal-reserve__title">ご予約フォーム</div>
+          <form id="js-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdghPmNWYmVCTXqMNsFQKF-0QKR4iuffouUHuFyuYmiPjPgnQ/formResponse" class="modal-reserve__form">
+            <dl class="modal-reserve__dl">
+              <div class="modal-reserve__raw">
+                <dt class="modal-reserve__label"><label for="your-name">お名前</label></dt>
+                <dd class="modal-reserve__input"><input type="text" name="entry.1277815573" id="your-name" placeholder="山田　花子"></dd>
+              </div>
+              <div class="modal-reserve__raw">
+                <dt class="modal-reserve__label"><label for="your-tel">電話番号</label></dt>
+                <div class="modal-reserve__input"><input type="tel" name="entry.1350019049" id="your-tel" placeholder="080-0000-0000"></div>
+              </div>
+              <div class="modal-reserve__raw">
+                <dt class="modal-reserve__label"><label for="your-mail">メールアドレス</label></dt>
+                <dd class="modal-reserve__input"><input type="email" name="entry.1090204832" id="mail" placeholder="aaaaa@aaa.aa"></dd>
+              </div>
+              <div class="modal-reserve__raw">
+                <dt class="modal-reserve__label"><label for="your-date">ご来店日時</label></dt>
+                <!-- <dd class="modal-reserve__input"><input type="datetime" name="" id="your-date" placeholder="2022年3月31日 19:00"></dd> -->
+                <dd class="modal-reserve__input"><input type="datetime-local" name="" id="your-date" value="2022-03-31T19:00"></dd>
+              </div>
+              <div class="modal-reserve__button">
+                <input type="submit" value="予約内容を送信">
+                <!-- <input type="submit" value="予約内容を送信" data-target=".js-for-modal" class="js-modal-close"> -->
+              </div>
+            </dl>
+          </form>
+          <div id="js-success" class="modal-reserve__message">
+            <p>送信完了しました。ありがとうございました。</p>
+          </div>
+          <div id="js-error" class="modal-reserve__message modal-reserve__message--error">
+            <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+          </div>
+        <!-- </div> -->
+    </div>
+    <div class="modal-background js-modal-close js-for-modal" data-target=".js-for-modal"></div>
+  
+  
+    
+  
+    <section class="top-concept top-concept-layout">
+      <div class="inner">
+        <h2 class="top-concept__logo wow fadeInUp"><img src="./images/common/concept-logo.png" alt="ロゴ"></h2>
+        <p class="top-concept__text wow fadeInUp">イタリア語でSorriso＝笑顔<br> 来店していただいたお客様へ思わず笑顔になる<br class="u-mobile">ピザをご提供したい<br>
+          そんな素直な想いから名付けられました。</p>
+      </div>
+      <div class="top-concept__decoration-top u-mobile"><img src="./images/top/top-concept-item-01.png" alt="ピザの絵"></div>
+      <div class="top-concept__decoration-top u-desktop"><img src="./images/top/top-concept-item-01-pc.png" alt="ピザの絵">
+      </div>
+      <div class="top-concept__decoration-bottom u-mobile"><img src="./images/top/top-concept-item-02.png" alt="ピザの絵">
+      </div>
+      <div class="top-concept__decoration-bottom u-desktop"><img src="./images/top/top-concept-item-02-pc.png" alt="ピザの絵">
+      </div>
+    </section>
+  
+    <section class="top-brand top-brand-layout">
+      <div class="top-brand__content">
+        <div class="top-brand__image">
+          <img src="./images/top/top-brand-sp.png" alt="パスタの調理写真">
+        </div>
+        <div class="top-brand__name-image u-desktop slide-in leftAnime">
+          <img src="./images/top/top-brand-name-pc.png" alt="お店の名前" class="slide-in_inner leftAnimeInner">
+        </div>
+        <div class="top-brand__name-image u-mobile  slide-in leftAnime">
+          <img src="./images/top/top-brand-name-sp.png" alt="お店の名前" class="slide-in_inner leftAnimeInne"r>
+        </div>
+        
+        <!-- <div class="top-brand__titles u-mobile">
+          <h3 class="top-brand__secondary-title">笑顔が溢れる　癒しの空間</h3>
+          <div class="top-brand__line"></div>
+          <h2 class="top-brand__primary-title"><span class="top-brand__color-black-pc">So</span>rriso<span class="u-desktop">&nbsp;</span><br class="u-mobile"><span class="top-brand__color-black-sp">Pizza</span></h2>
+        </div> -->
+      </div>
+    </section>
+  
+  
+    <section id="about" class="top-about top-about-layout">
+      <div class="top-about__background"></div>
+      <div class="top-about__decoration u-desktop"><img src="./images/top/top-about-item-pc-01.png" alt="チーズの挿し絵"></div>
+      <div class="inner">
+        <div class="top-about__contents-wrapper">
+          <div class="top-about__contents">
+            <div class="top-about__titles top-titles wow fadeInUp">
+              <h3 class="top-titles__secondary">About</h3>
+              <h2 class="top-titles__primary">追求したこだわり</h2>
+            </div>
+            <p class="top-about__text wow fadeInUp"><span>本当に</span>おいしい料理は人を幸せにする力がある<br> 素材選びから、一切の妥協を許さない<br> 訪れるたびに感動を呼ぶイタリアン</p>
+            <div class="top-about__images u-mobile">
+              <div class="top-about__image"></div>
+              <div class="top-about__images-name">Quality</div>
+              <div class="top-about__images-decoration"><img src="./images/top/top-about-item-sp-01.png" alt="トマトの挿絵"></div>
+            </div>
+            <div class="top-about__button wow fadeInUp">
+              <a href="#" class="button"><span>もっと見る</span></a>
+            </div>
+          </div>
+          <div class="top-about__images u-desktop">
+            <div class="top-about__image"></div>
+            <div class="top-about__images-name">Quality</div>
+            <div class="top-about__images-decoration"><img src="./images/top/top-about-item-sp-01.png" alt="トマトの挿絵"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="menu" class="top-menu top-menu-layout">
+      <div class="top-menu__background"></div>
+      <div class="top-menu__decoration u-desktop"><img src="./images/top/top-menu-item-pc-01.png" alt="チーズの挿し絵"></div>
+      <div class="top-menu__inner">
+        <div class="top-menu__contents-wrapper">
+          <div class="top-menu__images u-desktop">
+            <div class="top-menu__image"><img src="./images/top/top-menu-pc.png" alt="ワインとサラダの写真"></div>
+            <div class="top-menu__images-name">Fun time</div>
+          </div>
+          <div class="top-menu__contents">
+            <div class="top-menu__titles top-titles wow fadeInUp">
+              <h3 class="top-titles__secondary">Menu</h3>
+              <h2 class="top-titles__primary">メニュー</h2>
+            </div>
+            <p class="top-menu__text wow fadeInUp">お料理とワインを楽しみながら、<br>記憶に残るお時間をSorriso Pizzaで<br> お過ごしください。</p>
+            <div class="top-menu__images u-mobile">
+              <div class="top-menu__image"><img src="./images/top/top-menu-sp.png" alt="ワインとサラダの写真"></div>
+              <div class="top-menu__images-name">Fun time</div>
+            </div>
+            <div class="top-menu__button wow fadeInUp">
+              <a href="#" class="button"><span>もっと見る</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="top-products top-products-layout">
+      <div class="swiper-container js-top-products">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <figure class="top-products__content">
+              <img src="./images/top/top-product-01.png" alt="パスタの写真">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="top-products__content">
+              <img src="./images/top/top-product-02.png" alt="サラダの写真">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="top-products__content">
+              <img src="./images/top/top-product-03.png" alt="ワインの写真">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="top-products__content">
+              <img src="./images/top/top-product-04.png" alt="ピザの写真">
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="top-products__content">
+              <img src="./images/top/top-product-05.png" alt="ケーキの写真">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <section class="top-blog top-blog-layout">
+      <div class="top-blog__decoration u-desktop"><img src="./images/top/top-blog-item-01.png" alt="オリーブの絵"></div>
+      <div class="inner">
+        <div class="top-blog__titles top-titles">
+          <h3 class="top-titles__secondary">News</h3>
+          <h2 class="top-titles__primary">お知らせ</h2>
+        </div>
+        <div class="top-blog__cards blog-cards">
+          <a href="#" class="blog-cards__item blog-card">
+              <div class="blog-card__image"><img src="./images/top/top-blog-01.png" alt="ブログのサムネイル"></div>
+              <div class="blog-card__headding">
+                <div class="blog-card__category">お知らせ</div>
+              </div>
+              <div class="blog-card__title">〇〇グランプリ１位獲得！！</div>
+              <time class="blog-card__time" datetime="2022-03-03">2022.03.03</time>
+          </a>
+          <a href="#" class="blog-cards__item blog-card">
+              <div class="blog-card__image"><img src="./images/top/top-blog-02.png" alt="ブログのサムネイル"></div>
+              <div class="blog-card__headding">
+                <div class="blog-card__category blog-card__category--background-red">メニュー</div>
+              </div>
+              <div class="blog-card__title">新商品〇〇が登場します！！</div>
+              <time class="blog-card__time" datetime="2022-03-03">2022.03.03</time>
+          </a>
+          <a href="#" class="blog-cards__item blog-card">
+              <div class="blog-card__image"><img src="./images/top/top-blog-03.png" alt="ブログのサムネイル"></div>
+              <div class="blog-card__headding">
+                <div class="blog-card__category blog-card__category--background-red">メニュー</div>
+              </div>
+              <div class="blog-card__title">スタッフおすすめNo. 1をご紹介！</div>
+              <time class="blog-card__time" datetime="2022-03-03">2022.03.03</time>
+          </a>
+          <a href="#" class="blog-cards__item blog-card">
+              <div class="blog-card__image"><img src="./images/top/top-blog-04.png" alt="ブログのサムネイル"></div>
+              <div class="blog-card__headding">
+                <div class="blog-card__category blog-card__category--background-white">店長のつぶやき</div>
+              </div>
+              <div class="blog-card__title">本場イタリアへ修行に行ってきました！</div>
+              <time class="blog-card__time" datetime="2022-03-03">2022.03.03</time>
+          </a>
+        </div>
+        <div class="top-blog__button">
+          <a class="button" href="#"><span>もっと見る</span></a>
+        </div>
+      </div>
+    </section>
+  
+    <section id="access" class="top-access top-access-layout">
+      <div class="inner">
+        <div class="top-access__titles top-titles">
+          <h3 class="top-titles__secondary">Access</h3>
+          <h2 class="top-titles__primary">アクセス</h2>
+        </div>
+        <div class="top-access__map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.656784611314!2d139.80851171489562!3d35.710062680187626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1649021193979!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="top-access__logo"><img src="./images/common/logo.png" alt="ロゴ"></div>
+        <div class="top-access__content">
+          <p class="top-access__text">〒000-0000 東京都〇〇区〇〇町1-1-1<br>東京〇〇タウン〇〇 3F</p>
+          <p class="top-access__text">TEL 03-0000-0000</p>
+          <p class="top-access__text">Lunch 12:00-15:00 (L.O 14:00)<br>Dinner 18:00-23:00 (L.O 22:00)</p>
+          <p class="top-access__text">定休日：無休</p>
+          <div class="top-access__decoration u-desktop"><img src="./images/top/top-access-item-01.png" alt="コショウの挿し絵"></div>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer footer-layout">
+      <div class="footer__decoration u-desktop"><img src="./images/top/footer-item-01.png" alt="マッシュルームの挿し絵"></div>
+      <div class="inner">
+        <div class="footer__wrapper">
+          <div class="footer__image"><img src="./images/top/footer-image.png" alt="入口ドアの写真"></div>
+          <div class="footer__content">
+            <div class="footer__text">ご予約・お問い合わせはこちら</div>
+            <div class="footer__tel">000-0000-0000</div>
+            <div class="footer__button js-modal-open" data-target=".js-for-modal"><a href="#" class="button button--decoration-italy"><span>予約する</span></a></div>
+            <nav class="footer__nav">
+              <ul class="footer__lists">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#access">Access</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">&copy;2022 Sorriso Pizza</div>
+    </footer>
+  
+  </div>
+
+
+
+
+
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- メインビジュアルに使用するライブラリ  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+  <!-- ローディングに使用 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+  <!-- フワッと表示させるため -->
+  <script src="./js/wow.min.js"></script>
+  <script defer src="./js/script.js"></script>
+
+
+</body>
+
+</html>

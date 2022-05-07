@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.nav {
+    height: inherit;
+}
+
+.nav__lists {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.nav__lists li {
+    height: inherit;
+    padding: 0 rem(24);
+}
+
+.nav__lists li:last-child {
+    margin-right: rem(24);
+}
+
+
+
+.nav__lists li a {
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    position: relative;
+    height: inherit;
+    line-height: 1.0;
+}
+
+.nav__lists li a::after {
+    content: "";
+    position: absolute;
+    bottom: 35%;
+    left: 0%;
+    // transform: translate(0,-50%);
+    width: 100%;
+    height: rem(2);
+    background: $black;
+    transition: all .3s;
+    transform: scale(0,1);
+    transform-origin: center top;
+}
+
+.nav__lists li a:hover::after {
+    transform: scale(1,1);
+}
